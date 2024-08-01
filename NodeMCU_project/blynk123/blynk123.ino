@@ -12,7 +12,7 @@
 
 void Line_Notify(String message);
 
-#define LINE_TOKEN "Rz6mjV6NgVby5f8X3jOyX66x2jxPooimPbuA5tGjcNH"  // line TOKEN
+#define LINE_TOKEN ""  // line TOKEN
 #define BLYNK_TEMPLATE_ID "TMPL60gq2PKfY"
 #define BLYNK_TEMPLATE_NAME "project"
 #define BLYNK_AUTH_TOKEN "6Q-mELAV88m2elElQ6uE5juNqSU4rmBP"
@@ -24,8 +24,8 @@ void Line_Notify(String message);
 #include <BlynkSimpleEsp8266.h>
 // Your WiFi credentials
 // Set password to "" for open networks.
-char ssid[] = "Poomsaeroy";
-char pass[] = "0123456789";
+char ssid[] = "";
+char pass[] = "";
 BlynkTimer timer;
 int sensorValue;
 
@@ -114,12 +114,6 @@ void loop() {
   timer.run();
   thingspeak_notify(sensorValue);
   
-  // int end_time = millis();
-  // if (end_time - start_time > 600000) {
-  //   start_time = millis();
-  //   Serial.println("Sleeping");
-  //   ESP.deepSleep(SECONDS_DS(60));
-  // }
 }
 
 void Line_Notify(String message) {
